@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectColour"
+    tools:layout_editor_absoluteY="73dp">
+
+    <EditText
+        android:id="@+id/editRed"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/barR"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="@string/_20"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/editGreen"
+        app:layout_constraintEnd_toStartOf="@+id/colorPreview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editBlue"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="@color/barB"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="@string/_20"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/colorPreview"
+        app:layout_constraintTop_toBottomOf="@+id/editGreen" />
+
+    <EditText
+        android:id="@+id/editGreen"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/barG"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="@string/_20"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/editBlue"
+        app:layout_constraintEnd_toStartOf="@+id/colorPreview"
+        app:layout_constraintTop_toBottomOf="@+id/editRed"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/greenBar"
+        android:layout_width="248dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:max="255"
+        android:progressBackgroundTint="@color/barG"
+        android:progressTint="@color/barG"
+        android:thumbTint="@color/barG"
+        app:layout_constraintBottom_toTopOf="@+id/blueBar"
+        app:layout_constraintEnd_toStartOf="@+id/editGreen"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redBar" />
+
+    <SeekBar
+        android:id="@+id/redBar"
+        android:layout_width="248dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:max="255"
+        android:progressBackgroundTint="@color/barR"
+        android:progressTint="@color/barR"
+        android:thumbTint="@color/barR"
+        app:layout_constraintBottom_toTopOf="@+id/greenBar"
+        app:layout_constraintEnd_toStartOf="@+id/editRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/blueBar"
+        android:layout_width="248dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="156dp"
+        android:max="255"
+        android:progressBackgroundTint="@color/barB"
+        android:progressTint="@color/barB"
+        android:thumbTint="@color/barB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editBlue"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenBar" />
+
+    <ImageView
+        android:id="@+id/colorPreview"
+        android:layout_width="179dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:color/black" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorRed"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toTopOf="@+id/yellow"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/blue"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorBlue"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toTopOf="@+id/white"
+        app:layout_constraintStart_toEndOf="@+id/red" />
+
+    <Button
+        android:id="@+id/green"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorGreen"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toTopOf="@+id/grey"
+        app:layout_constraintStart_toEndOf="@+id/blue" />
+
+    <Button
+        android:id="@+id/purple"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPurple"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toTopOf="@+id/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/green" />
+
+    <Button
+        android:id="@+id/black"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorBlack"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submitButton2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/grey" />
+
+    <Button
+        android:id="@+id/grey"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorGrey"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/white"
+        app:layout_constraintTop_toBottomOf="@+id/purple" />
+
+    <Button
+        android:id="@+id/yellow"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorYellow"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orange"
+        app:layout_constraintTop_toBottomOf="@+id/blue" />
+
+    <Button
+        android:id="@+id/orange"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorOrange"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/red" />
+
+    <Button
+        android:id="@+id/white"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorWhite"
+        android:onClick="onClickColour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yellow"
+        app:layout_constraintTop_toBottomOf="@+id/green" />
+
+    <Button
+        android:id="@+id/submitButton2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="onClickSubmit"
+        android:text="@string/apply_changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorPreview" />
+
+</android.support.constraint.ConstraintLayout>

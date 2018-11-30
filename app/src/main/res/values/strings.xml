@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FingerPainter</string>
+    <item name="myFingerPainterViewId" type="id" />
+    <string name="todo">TODO</string>
+    <string name="square">Square</string>
+    <string name="round">Round</string>
+    <string name="apply_changes">Apply </string>
+    <string name="_20">20</string>
+</resources>

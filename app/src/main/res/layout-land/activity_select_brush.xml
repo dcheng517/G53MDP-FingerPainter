@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectBrush"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/brushPreview"
+        android:layout_width="144dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/sizeSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/transparent" />
+
+    <SeekBar
+        android:id="@+id/sizeSlider"
+        android:layout_width="395dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="55dp"
+        android:max="100"
+        android:progress="20"
+        app:layout_constraintBottom_toTopOf="@+id/typeRadio"
+        app:layout_constraintEnd_toStartOf="@+id/editSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <EditText
+        android:id="@+id/editSize"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="@string/_20"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/typeRadio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sizeSlider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <Button
+        android:id="@+id/submitButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="onClick"
+        android:text="@string/apply_changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/typeRadio"
+        android:layout_width="352dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="68dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/round" />
+
+        <RadioButton
+            android:id="@+id/square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/square" />
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
